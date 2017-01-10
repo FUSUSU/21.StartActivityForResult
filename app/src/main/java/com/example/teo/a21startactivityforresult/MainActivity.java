@@ -6,6 +6,7 @@ import android.widget.Button;
 import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
+    //khái báo Button và textView
     Button button1;
     TextView textView1;
 
@@ -14,7 +15,8 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        //Ánh xạ
+        textView1 = (TextView) findViewById(R.id.textView1);
+        button1 = (Button) findViewById(R.id.button1);
     }
-
-
 }
