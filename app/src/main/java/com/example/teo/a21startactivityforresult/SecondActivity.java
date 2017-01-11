@@ -1,5 +1,6 @@
 package com.example.teo.a21startactivityforresult;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Menu;
@@ -23,7 +24,11 @@ public class SecondActivity extends AppCompatActivity {
         button1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                String message = editText1.getText().toString();
+                Intent intent = new Intent();
+                intent.putExtra("MESSAGE", message);
+                setResult(2, intent);
+                finish(); //"finishing activity" hoạt động hoàn thiện.
             }
         });
     }
